@@ -6,7 +6,8 @@ class MStruct():
 
 class MStruct2():
     def __init__(self):
-        _sVar = 13
+        self.__sVar = 13
+        self._sVar = 13
         pass
     @property
     def sVar(self):
@@ -14,6 +15,7 @@ class MStruct2():
     @sVar.setter
     def sVar(self, v):
         print(f'set _sVar: {v}')
+        print(f"Debug: {self.__sVar}")
         self._sVar = v
 if __name__ == "__main__":
  s = MStruct()
